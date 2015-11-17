@@ -25,6 +25,16 @@ BugBunny
 
 ---
 
+### Objectives
+
+<br>
+
+* The first part of the assignment was to code an interactive web app using the R package _shiny_ and deploy it on the shinyapps.io web server.
+
+* The second part of the assignment was to produce this html5 slide presentation motivating the app.
+
+---
+
 ### Population Projections
 ### for the UK
 
@@ -32,27 +42,22 @@ BugBunny
 
 * 'Demography is destiny' according to Auguste Comte, or maybe Wattenberg and Scammon (1970).
 
-* The app computes population projections for the United Kingdom for 2015-50 using forecasts of total fertility selected by the user. It can produce a population pyramid for the mid- or end-point of any decade in this period that the user selects.
+* This app computes population projections for the United Kingdom for 2015-50 using forecasts of total fertility selected by the user. It can produce a population pyramid for the mid- or end-point of any decade in this period that the user selects.
 
 * Thereby, it enables the user to visualize how women's changing family sizes might affect the future size and age structure of the British population.
 
 ---
 
-### Do you want world peace?
-<br>
-<div class="fragment">
-This app can't help!
-</div>
+### The power of _shiny_
+
 <br>
 
----
-
-### Do you want your choice of chocolate or beer?
+<p style="text-align: left;"> The app demonstrates several features of <em>shiny:</em></p>
 <br>
-<div class="fragment">
-Try looking in the fridge. You might get lucky!
-</div>
-<br>
+* <div class="fragment">Tabbed web pages</div>
+* <div class="fragment"> Use of widgets for input (sliders, dropdown boxes)</div>
+* <div class="fragment"> Reactive code that runs if the sliders change, but not when the dropdown box does</div>
+* <div class="fragment"> Two types of reactive output (text and a chart)</div>
 
 ---
 
