@@ -35,7 +35,7 @@ BugBunny
 
 * This app computes population projections for the United Kingdom for 2015-50 using forecasts of total fertility chosen by the user. It can produce a population pyramid for the mid- or end-point of any decade within this period that the user selects.
 
-* Thereby, it enables the user to visualize how women's changing family sizes might affect the future size and age structure of the British population.
+* Thereby, it enables the user to visualize how changes in the birth rate might affect the future size and age structure of the British population.
 
 ---
 
@@ -46,11 +46,15 @@ Men <- c(2059, 2021, 1813, 1962, 2203, 2240, 2179, 2029, 2124,
     2280, 2249, 1949, 1713, 1754, 1295, 992, 679, 368, 163)
 Women <- c(1959, 1928, 1730, 1858, 2117, 2215, 2203, 2046, 2169,
     2346, 2312, 1999, 1785, 1858, 1428, 1170, 905, 603, 384)
+agelab <- c("0-4","5-9","10-14","15-19","20-24","25-29","30-34",
+  "35-39","40-44","45-49","50-54","55-59","60-64","65-69","70-74",
+  "75-79","80-44","85-89", "90+")
 ```
+
 ```{r}
-library(plotrix); pyramid.plot(Men, Women, lxcol = "steelblue", 
-   rxcol = "plum", unit = "000s", labels = rep("", 19),
-   top.labels = c("Men", "2015", "Women"), gap = 0)
+library(plotrix); par(mar = pyramid.plot(Men, Women, gap = 250,  
+   lxcol = "steelblue", rxcol = "plum", unit = "000s", labels = agelab,
+   main = "United Kingdom", top.labels = c("Men", "2015", "Women")))
 ```
 
 ---
@@ -67,7 +71,7 @@ library(plotrix); pyramid.plot(Men, Women, lxcol = "steelblue",
 * <div class="fragment"> Use of widgets for input (sliders, dropdown boxes)</div>
 * <div class="fragment"> Reactive code that runs if the sliders change, but not when the dropdown box does</div>
 * <div class="fragment"> Two types of reactive output (text and a chart)</div>
-* <div class="fragment"> Web hosting on the shinyapps.io server</div>
+* <div class="fragment"> Web hosting on the shiny apps server</div>
 
 ---
 

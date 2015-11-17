@@ -40,21 +40,18 @@
 <li><p>The assignment was to code and deploy an interactive web app using the R package <em>shiny</em>.</p></li>
 <li><p>&#39;Demography is destiny&#39; according to Auguste Comte, or maybe Wattenberg and Scammon (1970).</p></li>
 <li><p>This app computes population projections for the United Kingdom for 2015-50 using forecasts of total fertility chosen by the user. It can produce a population pyramid for the mid- or end-point of any decade within this period that the user selects.</p></li>
-<li><p>Thereby, it enables the user to visualize how women&#39;s changing family sizes might affect the future size and age structure of the British population.</p></li>
+<li><p>Thereby, it enables the user to visualize how changes in the birth rate might affect the future size and age structure of the British population.</p></li>
 </ul>
 
 </section>
 <section class='' data-state='' id='slide-3'>
   <h3>A <strong><em>static</em></strong> population pyramid</h3>
-  <pre><code class="r">library(plotrix); pyramid.plot(Men, Women, lxcol = &quot;steelblue&quot;, 
-   rxcol = &quot;plum&quot;, unit = &quot;000s&quot;, labels = rep(&quot;&quot;, 19),
-   top.labels = c(&quot;Men&quot;, &quot;2015&quot;, &quot;Women&quot;), gap = 0)
+  <pre><code class="r">library(plotrix); par(mar = pyramid.plot(Men, Women, gap = 250,  
+   lxcol = &quot;steelblue&quot;, rxcol = &quot;plum&quot;, unit = &quot;000s&quot;, labels = agelab,
+   main = &quot;United Kingdom&quot;, top.labels = c(&quot;Men&quot;, &quot;2015&quot;, &quot;Women&quot;)))
 </code></pre>
 
 <p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
-
-<pre><code>## [1] 5.1 4.1 4.1 2.1
-</code></pre>
 
 </section>
 <section class='' data-state='' id='slide-4'>
@@ -70,7 +67,7 @@
 <li><div class="fragment"> Use of widgets for input (sliders, dropdown boxes)</div></li>
 <li><div class="fragment"> Reactive code that runs if the sliders change, but not when the dropdown box does</div></li>
 <li><div class="fragment"> Two types of reactive output (text and a chart)</div></li>
-<li><div class="fragment"> Web hosting on the shinyapps.io server</div></li>
+<li><div class="fragment"> Web hosting on the shiny apps server</div></li>
 </ul>
 
 </section>
